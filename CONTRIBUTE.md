@@ -1,17 +1,17 @@
 Contribution Guidelines
 =================================
 
-First off all, thank you for taking the time to contribute! Pull requests are always welcome.
+First of all, thank you for taking the time to contribute! Pull requests are always welcome.
 The Guidelines aim to make collaboration on the project easier and cutting down on time
 spent on bikeshedding. They represent agreed upon rules which shall be followed by every
-teammember.
+contributor.
 
 This document is NOT an arbitrary set of rules to be follewed blindly, but rather a written down
 of the agreed upon standard. Of course this is a living document and subject to change,
 so feel free to submit pull requests to this document as well.
 
-These rules only purpose is to improve code readabilty and thus maintainabilty and code quality.
-Whenever a rule is in conflict with this goal it should be challenged.
+These rules only purpose is to improve code readabilty and quality and thus maintainabilty
+and overall project success. Whenever a rule is in conflict with this goal it should be challenged.
 
 
 Code Style
@@ -33,24 +33,26 @@ code-style.kotlin.java-statics-and-enum-members.use-single-name-import = true
 You can find general settings in the `.editorconfig` file as well as IntelliJ specific settings in the file
 `.editorconfig-idea.xml`. Example screenshots can be found at the [bottom](#screenshots) of this document.
 
-### Tests
-**Naming**
-When writing tests in koltin we like to make use of the fact, that Kotlin allows Unicode function names. This means
+### Test Code
+**Naming:** When writing tests in koltin we like to make use of the fact, that Kotlin allows Unicode function names. This means
 please name your tests in the following pattern.
 * ```@Test fun `Can do Stuff when Condition is given`() {…}```
 * ```@Test fun `Cannot do Stuff when condition is missing`() {…}```
 * ```@Test fun `Throw Exception when something unexpected happens`() {…}```
 
-**Annotations**
-The `@Test` annotation should be placed right in front if the `fun` keyword.
+**Annotations:** The `@Test` annotation should be placed right in front if the `fun` keyword.
 Any other annotations should be placed in the line(s) above of the function declaration 
 
 
 Testing & Documentation
 -------
-Write unit and Integration Tests for your code
+Ideally you follow the 3 Laws of TDD as laid out by Robert Martin which are:
+1. You are not allowed to write any production code unless it is to make a failing unit test pass.
+2. You are not allowed to write any more of a unit test than is sufficient to fail;
+and compile failures are failures.
+3. You are not allowed to write a ny more production code than is sufficient to pass the one failing unit test.
+See Robert Martin's full talk on (youtube)[https://www.youtube.com/watch?v=qkblc5WRn-U]
 
-Run the tests! Write new ones and adapt them as needed.
 Add or change the documentation where necessary.
 * Add or change the API documentation
 * Add or change the project's readme
@@ -65,7 +67,6 @@ When commiting code please make sure that you:
 * Run all the tests to assure nothing else was accidentally broken.
 
 Prior to committing, please want to pull in the latest upstream changes.
-
 * Push your changes to the topic branch in your fork of the repository.
 * Initiate a pull request
 
