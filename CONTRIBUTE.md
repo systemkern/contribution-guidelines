@@ -2,12 +2,25 @@ Contribution Guidelines
 =================================
 
 First off all, thank you for taking the time to contribute! Pull requests are always welcome.
-By contributing to this project
-you are putting your work into the public domain (see [unlicense](LICENSE))
+The Guidelines aim to make collaboration on the project easier and cutting down on time
+spent on bikeshedding. They represent agreed upon rules which shall be followed by every
+teammember.
+
+This document is NOT an arbitrary set of rules to be follewed blindly, but rather a written down
+of the agreed upon standard. Of course this is a living document and subject to change,
+so feel free to submit pull requests to this document as well.
+
+These rules only purpose is to improve code readabilty and thus maintainabilty and code quality.
+Whenever a rule is in conflict with this goal it should be challenged.
 
 
 Code Style
 ----------
+### Programming Languages
+Always try to keep the number of languages to a minium. If there is no explicit functional reason
+to use an additional language (eg. Java in a Kotlin module). It must be avoided. 
+
+### General Code Style
 Please follow the code style of the Project. This Project uses the IntelliJ default settings except:
 ```
 code-style.kotlin.tabs-and-indents.continuation-indent = 4
@@ -20,6 +33,18 @@ code-style.kotlin.java-statics-and-enum-members.use-single-name-import = true
 You can find general settings in the `.editorconfig` file as well as IntelliJ specific settings in the file
 `.editorconfig-idea.xml`. Example screenshots can be found at the [bottom](#screenshots) of this document.
 
+### Tests
+**Naming**
+When writing tests in koltin we like to make use of the fact, that Kotlin allows Unicode function names. This means
+please name your tests in the following pattern.
+* ```@Test fun `Can do Stuff when Condition is given`() {…}```
+* ```@Test fun `Cannot do Stuff when condition is missing`() {…}```
+* ```@Test fun `Throw Exception when something unexpected happens`() {…}```
+
+**Annotations**
+The `@Test` annotation should be placed right in front if the `fun` keyword.
+Any other annotations should be placed in the line(s) above of the function declaration 
+
 
 Testing & Documentation
 -------
@@ -28,7 +53,7 @@ Write unit and Integration Tests for your code
 Run the tests! Write new ones and adapt them as needed.
 Add or change the documentation where necessary.
 * Add or change the API documentation
-* Add or change the preject's readme
+* Add or change the project's readme
 
 
 Version Control
@@ -40,13 +65,11 @@ When commiting code please make sure that you:
 * Run all the tests to assure nothing else was accidentally broken.
 
 Prior to committing, please want to pull in the latest upstream changes.
-Please use rebasing rather than merging.
-Merging creates "merge commits" that pollute the project history.
 
 * Push your changes to the topic branch in your fork of the repository.
 * Initiate a pull request
 
-### Commit Messages
+### Commit Messages / Pull Request Messages
 1. Start the subject line with the ticket number followed by an uppercase
 2. Limit the length of the subject line to 50 characters
 3. Use the imperative in the subject line
