@@ -16,6 +16,9 @@ and overall project success. Whenever a rule is in conflict with this goal it sh
 
 Code Style
 ----------
+“Programs are meant to be read by humans and only incidentally for computers to execute.” : Donald Ervin Knuth
+The aim of this code style is to redue the mental load while reading the cod 
+
 ### Programming Languages
 Always try to keep the number of languages to a minium. If there is no explicit functional reason
 to use an additional language (eg. Java in a Kotlin module). It must be avoided. 
@@ -32,6 +35,10 @@ code-style.kotlin.java-statics-and-enum-members.use-single-name-import = true
 
 You can find general settings in the `.editorconfig` file as well as IntelliJ specific settings in the file
 `.editorconfig-idea.xml`. Example screenshots can be found at the [bottom](#screenshots) of this document.
+
+#### Static Imports
+Static imports are used to be used as a default, erspecially if the Type is defined in the same line.
+They can only be ommited to improve readability or prevent compile errors. 
 
 ### Test Code
 **Naming:** When writing tests in koltin we like to make use of the fact, that Kotlin allows Unicode function names. This means
@@ -51,7 +58,7 @@ Ideally you follow the 3 Laws of TDD as laid out by Robert Martin which are:
 2. You are not allowed to write any more of a unit test than is sufficient to fail;
 and compile failures are failures.
 3. You are not allowed to write a ny more production code than is sufficient to pass the one failing unit test.
-See Robert Martin's full talk on (youtube)[https://www.youtube.com/watch?v=qkblc5WRn-U]
+See Robert Martin's talk on (youtube)[https://www.youtube.com/watch?v=qkblc5WRn-U]
 
 Add or change the documentation where necessary.
 * Add or change the API documentation
