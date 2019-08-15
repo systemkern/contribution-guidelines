@@ -10,14 +10,17 @@ This document is NOT an arbitrary set of rules to be follewed blindly, but rathe
 of the agreed upon standard. Of course this is a living document and subject to change,
 so feel free to submit pull requests to this document as well.
 
-These rules only purpose is to improve code readabilty and quality and thus maintainabilty
+These rules only purpose is to improve code readability and quality and thus maintainability
 and overall project success. Whenever a rule is in conflict with this goal it should be challenged.
 
 
 Code Style
 ----------
 “Programs are meant to be read by humans and only incidentally for computers to execute.” : Donald Ervin Knuth
-The aim of this code style is to redue the mental load while reading the cod 
+
+Please contribute well structured, well formatted, idiomatic code. Make your code easy to read by using expressive
+variable and function names. Don't be too clever with your code - understandable code is much better than 
+code that is just short. Where necessary add comments and documentation.
 
 ### Programming Languages
 Always try to keep the number of languages to a minium. If there is no explicit functional reason
@@ -83,7 +86,7 @@ Prior to committing, please want to pull in the latest upstream changes.
 3. Use the imperative in the subject line
 4. No period at the end of the subject
 5. Leave a blank line after the subject for separation
-6. Limit the leght of the body to 72 characters
+6. Limit the length of the body to 72 characters
 7. Explain the why and the context of the change, not what was changed
 
 Example:
